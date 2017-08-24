@@ -1,0 +1,14 @@
+/.git/
+
+# PhpStorm
+/.idea/
+
+#Pictures and fonts 
+/img/*
+/font/*
+
+# Sass directory created by Compass
+/.sass-cache/
+
+# JS library for carousels : http://kenwheeler.github.io/slick/ (v1.6.0)
+/slick/

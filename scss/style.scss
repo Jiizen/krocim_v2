@@ -1,0 +1,758 @@
+/* Import police Aparaj.ttf */
+@font-face {
+  font-family: "aparajb";
+  src: url("/font/aparajb.ttf");
+}
+
+/* Variables */
+$greyKrocim: #464a55;
+$heightNav: 65px;
+$fontSizeNav: 18px;
+$fontKrocim: aparaj;
+$redKrocim: darkred;
+$borderRadius: 20px;
+$widthKrocim: 85%;
+$paddingLosange: 40px;
+
+//Police blanche
+#navbar-component a, #competences, #demande_devis, footer a, #main_footer, #demande_devis a, #competences_mob {
+  color: white;
+}
+
+//Margin-auto
+header, #navbar-component, #nav_container_middle, #main_slider div, #main_slider div img, .sep_losange,
+.sep_losange img, #container, #container #content, #container h1:before, #container h1:after, footer
+{
+  margin: auto;
+}
+
+// Text-align center
+header, #navbar-component a, #container h1, #container h2, #div_losange_bas, #competences div, #competences_mob div,
+#demande_devis, footer {
+  text-align: center;
+}
+
+
+// Entete
+#header_pc {
+  width: 75%;
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 185px;
+  }
+  .titres {
+    font-family: $fontKrocim, sans-serif;
+    font-size: 1.5em;
+    margin-left: auto; margin-top: auto; margin-right: auto;
+    margin-bottom: 5px;
+    bottom: 0;
+    color: $greyKrocim;
+    font-weight: bold;
+    font-style: italic;
+  }
+}
+#header_mob {
+  display: none;
+}
+
+// Nav
+#navbar-component {
+  height: $heightNav;
+  background-color: $greyKrocim;
+  border-top-right-radius: $borderRadius;
+  border-top-left-radius: $borderRadius;
+  font-family: $fontKrocim, sans-serif;
+  width: $widthKrocim;
+  font-size: $fontSizeNav;
+  #nav_container_middle {
+    width: 90%;
+    line-height: $heightNav;
+    #nav_container_margin_left {
+      display: flex;
+      justify-content: space-around;
+      margin-left: 50px;
+
+      // Tous les liens
+      a {
+        display: block;
+        text-decoration: none;
+        width: 120px;
+      }
+
+      // Les liens autres que le bouton accueil
+      .lien {
+        &:hover {
+          font-weight: bold;
+        }
+        &:after {
+          border: 2px solid rgba($redKrocim, 0);
+          bottom: 8px;
+          content: " ";
+          display: block;
+          margin: 0 auto;
+          width: 0;
+          position: relative;
+          transition: all 50ms ease-in-out;
+        }
+        &:hover:after {
+          border-color: $redKrocim;
+          transition: width 400ms ease-in-out;
+          width: 100%;
+        }
+      }
+
+      // Bouton accueil
+      #home {
+        i {
+          vertical-align: middle;
+          background-color: $redKrocim;
+          width: 80px;
+          border-radius: 10px;
+          padding: 8px;
+          &:hover {
+            background-color: white;
+            color: $redKrocim;
+            transition: background-color 1s ease;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+// Slider principal de la page
+#main_slider {
+  div {
+    background-color: $greyKrocim;
+    width: $widthKrocim;
+    img {
+      width: 100%;
+      max-height: 450px;
+    }
+  }
+}
+
+// Separation losange du haut
+.sep_losange {
+  height: 60px;
+  width: $widthKrocim;
+  background-color: black;
+  position: relative;
+  z-index: 0;
+  img {
+    display: block;
+  }
+  #losange_haut {
+    padding-top: 15px;
+  }
+}
+
+// Contenu principal de la page
+#container {
+  font-family: $fontKrocim, sans-serif;
+  width: $widthKrocim;
+  background-color: white;
+  border-right: solid 1px silver; border-left: solid 1px silver;
+  padding-bottom: $paddingLosange;
+  #content {
+    padding-top: $paddingLosange;
+    width: 70%;
+    //margin: auto;
+    h1 {
+      letter-spacing: -2px;
+      &:before, &:after {
+        content: " ";
+        display: block;
+        border: 1px solid $redKrocim;
+      }
+      &:after {
+        margin-top: 15px;
+        width: 50%;
+      }
+      &:before {
+        margin-bottom: 15px;
+        width: 75%;
+      }
+    }
+    h2 {
+      &:after {
+        margin-top: 15px;
+        content: " ";
+        display: block;
+        border: 1px solid $redKrocim;
+      }
+    }
+    .justify {
+      font-size: 18px;
+      text-align: justify;
+    }
+    #img_ecologie {
+      width: $widthKrocim;
+      border-radius: $borderRadius;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  // Separation losange du bas
+  #div_losange_bas {
+    #losange_bas {
+      position: relative;
+      margin-bottom: -90px;
+      z-index: 1;
+    }
+  }
+
+  // 3 blocs de competences
+  #competences_mob {display:none;}
+  #competences {
+    display: flex;
+    justify-content: space-around;
+    div {
+      border-radius: $borderRadius;
+      background-color: $redKrocim;
+      height: 200px;
+      width: 32%;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 0;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: none;
+      }
+      &:hover:after {
+        top: 0; left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        transition: all 0.8s ease-out;
+      }
+      i {
+        line-height: 150px;
+        font-size: 10em;
+      }
+      p {
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+  }
+
+  // Categories de realisations
+  #categories div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+      position: relative;
+      max-width: 400px;
+      max-height: 250px;
+      margin-bottom: 10px;
+      margin-right: 5px;
+      overflow: hidden;
+      border-radius: $borderRadius;
+      img {
+        border-radius: $borderRadius;
+        transition: all 0.8s ease-in-out;
+        max-width: 100%;
+        &:hover {
+          border-radius: $borderRadius;
+          transform:scale(1.25) rotate(10deg);
+        }
+      }
+      span {
+        position: absolute;
+        text-align: center;
+        bottom: 15px;
+        background-color: rgba(42, 40, 34, 0.65);
+        width: $widthKrocim;
+        height: 40px;
+        line-height: 40px;
+        color: white;
+      }
+    }
+
+  }
+
+  // Realisations
+  .slider-for {
+    margin: auto;
+    width: 1000px;
+    max-width: 100%;
+    .slick-prev:before, .slick-next:before {
+      color: black;
+    }
+    img {
+      margin:auto;
+    }
+  }
+  .slider-nav {
+    width: 1000px;
+    max-width: 100%;
+    max-height: 60px;
+    margin: auto;
+    .slick-slide img {
+      width: 100%;
+      max-height: 60px;
+    }
+  }
+
+  #message_slider {
+    display: none;
+  }
+
+  #contact {
+    display: flex;
+    justify-content: center;
+    & #coordonnees {
+      flex-grow: 1;
+      text-align: center;
+      font-size: 1.2em;
+    }
+    & #google_maps {
+      flex-grow: 2;
+      & iframe {
+        width: 100%; height: 400px;
+      }
+    }
+  }
+
+  // Cadre de demande de devis
+  #demande_devis {
+    border-radius: $borderRadius;
+    background-color: $greyKrocim;
+    margin-left: auto; margin-right: auto; margin-bottom: auto;
+    margin-top: 35px;
+    font-size: 20px;
+    padding: 15px;
+    a {
+      background-color: $redKrocim;
+      border-radius: $borderRadius;
+      text-decoration: none;
+      padding: 10px;
+      &:hover {
+        font-weight: bold;
+        background-color: white;
+        color: $redKrocim;
+        transition: background-color 1s ease;
+      }
+    }
+  }
+}
+
+// Pied du site
+#footer_pc {
+  height: 190px;
+  background-color: $greyKrocim;
+  width: $widthKrocim;
+  border-bottom-right-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+  h2 {
+    text-decoration: underline;
+  }
+  #main_footer {
+    display: flex;
+    justify-content: center;
+    & div {
+      width: 33%;
+    }
+    & a:hover {
+      color: $redKrocim;
+    }
+    #liens_footer {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 16px;
+    }
+  }
+  #copyright {
+    height: 30px;
+    line-height: 25px;
+    font-style: italic;
+  }
+}
+
+#footer_mob {
+    display: none;
+}
+
+/* ------------------------------------- RESPONSIVE ------------------------------------- */
+
+// Contact
+@media (min-width: 250px) and (max-width: 900px) {
+  #contact {
+    flex-direction: column;
+    //& #coordonnes {
+    //  margin-bottom: 30px;
+    //}
+  }
+}
+
+
+// Realisations
+.slider-for, .slider-for img, .slider-nav {
+  @media (min-width: 1000px) and (max-width: 1700px) {
+    width: 800px;
+  }
+  @media (min-width: 800px) and (max-width: 1000px) {
+    width: 600px;
+  }
+  @media (min-width: 650px) and (max-width: 800px) {
+    width: 500px;
+  }
+  @media (min-width: 500px) and (max-width: 650px) {
+    width: 400px;
+  }
+}
+
+.slider-nav img {
+  @media (min-width: 800px) and (max-width: 1700px) {
+    max-height: 50px;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 500px) {
+  .slider-for, .slider-for img {
+    width: 250px;
+  }
+
+  .message_slide {
+    width: 85%;
+    display: block;
+    margin: auto;
+    padding: 5px;
+  }
+
+  .slider-nav, .slick-next, .slick-prev {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 1300px) {
+  #header_pc {
+    display: none;
+  }
+  #header_mob {
+    display: block;
+    text-align: left;
+  }
+
+  #navbar-component, #main_slider div, #main_slider div img,
+  .sep_losange, #container, #footer_pc {
+    width: 95%;
+  }
+
+  #container #content {
+    width: 85%;
+  }
+}
+
+// --------------------------------------------------------
+// Laptops, desktops
+@media (min-width: 1025px) and (max-width: 1200px) {
+  #header_mob {
+    height: 145px;
+    margin-left: 55px;
+    img {
+      width: 40%;
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  #header_mob {
+    height: 165px;
+    margin-left: 55px;
+    img {
+      width: 40%;
+    }
+  }
+}
+// --------------------------------------------------------
+
+// Tablets, Ipads (portrait)
+@media (min-width: 768px) and (max-width: 1024px) {
+  #header_mob {
+    height: 145px;
+    text-align: center;
+    margin-right: 40px;
+    @media (min-width: 900px) and (max-width: 950px) {
+      height: 135px;
+      margin-left: 20px;
+    }
+    @media (min-width: 850px) and (max-width: 900px) {
+      height: 125px;
+      margin-left: 20px;
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+      height: 115px;
+      margin-left: 20px;
+    }
+    @media (min-width: 750px) and (max-width: 800px) {
+      height: 110px;
+      margin-left: 20px;
+    }
+    img {
+      width: 45%;
+    }
+  }
+
+  // Losanges
+  .sep_losange {
+    height: 50px;
+    img {
+      width: 9%;
+    }
+    #losange_haut {
+      padding-top: 10px;
+    }
+  }
+
+  #div_losange_bas {
+    img {
+      width: 9%;
+    }
+    #losange_bas {
+      padding-bottom: 7px;
+    }
+  }
+
+}
+// --------------------------------------------------------
+
+// Tablets, Ipads (landscape)
+//@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+//}
+
+// Tablettes, mobiles à basse résolution (landscape)
+@media (min-width: 600px) and (max-width: 767px) {
+
+  #header_mob {
+    height: 105px;
+    margin-left: 55px;
+    @media (min-width: 650px) and (max-width: 700px) {
+      height: 90px;
+    }
+    @media (min-width: 600px) and (max-width: 650px) {
+      height: 85px;
+    }
+    img {
+      width: 45%;
+    }
+  }
+
+  #footer_pc {
+    @media (min-width: 600px) and (max-width: 650px) {
+      #copyright {
+        line-height: 10px;
+      }
+    }
+  }
+}
+
+  @media (min-width: 270px) and (max-width: 600px) {
+    #header_mob {
+      img {
+        width: 60%;
+      }
+      text-align: center;
+      @media (min-width: 550px) and (max-width: 600px) {
+        height: 115px;
+      }
+      @media (min-width: 500px) and (max-width: 550px) {
+        height: 110px;
+      }
+      @media (min-width: 450px) and (max-width: 500px) {
+        height: 95px;
+      }
+      @media (min-width: 400px) and (max-width: 450px) {
+        height: 85px;
+      }
+      @media (min-width: 350px) and (max-width: 400px) {
+        height: 90px;
+        img {
+          width: 70%;
+        }
+      }
+      @media (min-width: 250px) and (max-width: 350px) {
+        height: 85px;
+        img {
+          width: 80%;
+        }
+      }
+    }
+
+    // Nav
+    #navbar-component {
+      height: auto;
+      width: 95%;
+      #nav_container_middle {
+        #nav_container_margin_left {
+          margin: inherit;
+          flex-direction: column;
+          justify-content: space-around;
+          a {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            margin-left: auto; margin-right: auto;
+            border-bottom: 1px solid black;
+          }
+        }
+      }
+    }
+
+    // Diaporama principal
+    #main_slider div img {
+      width: 100%;
+    }
+
+    // Losanges
+    .sep_losange {
+      height: 25px;
+      img {
+        width: 10%;
+      }
+      #losange_haut {
+        padding-top: 2px;
+      }
+
+      @media (min-width: 450px) and (max-width: 500px) {
+        img {
+          width: 12%;
+        }
+        #losange_haut {
+          padding-top: 1px;
+        }
+      }
+      @media (min-width: 400px) and (max-width: 450px) {
+        margin-bottom: inherit;
+        img {
+          width: 13%;
+        }
+        #losange_haut {
+          padding-top: 3px;
+        }
+      }
+      @media (min-width: 350px) and (max-width: 400px) {
+        margin-bottom: inherit;
+        img {
+          width: 15%;
+        }
+        #losange_haut {
+          padding-top: 3px;
+        }
+      }
+      @media (min-width: 250px) and (max-width: 350px) {
+        margin-bottom: inherit;
+        img {
+          width: 18%;
+        }
+        #losange_haut {
+          padding-top: 5px;
+        }
+      }
+    }
+
+    #container {
+      font-size: 0.7em;
+      #content {
+        padding-top: 15px;
+      }
+      #demande_devis {
+        font-size: 1.2em;
+      }
+      #losange_bas {
+        padding-top: 2px;
+      }
+      @media (min-width: 250px) and (max-width: 550px) {
+        #competences {display:none;}
+        #competences_mob {
+          display: flex;
+          justify-content: space-around;
+          div {
+            border-radius: $borderRadius;
+            background-color: $redKrocim;
+            height: 80px;
+            width: 32%;
+            position: relative;
+            i {
+              line-height: 60px;
+              font-size: 5em;
+            }
+            p {
+              margin: 0;
+              font-size: 1.2em;
+            }
+          }
+        }
+
+        #demande_devis {
+          font-size: 1.2em;
+          margin-top: 15px;
+        }
+      }
+      @media (min-width: 250px) and (max-width: 405px) {
+        #demande_devis {
+          width: 80%;
+          font-size: 1.2em;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 25px;
+          a {
+            background-color: inherit;
+            border-radius: inherit;
+            border: inherit;
+            padding: 0;
+            &:hover {
+              background-color: inherit;
+            }
+          }
+        }
+      }
+      #demande_devis {
+        margin-bottom: 25px;
+      }
+    }
+
+    // Losange bas et pied
+    #div_losange_bas, #barre_losange_bas, #footer_pc {
+      display: none;
+    }
+
+    #footer_mob {
+      z-index: 2;
+      position: fixed;
+      bottom: 0; left: 0;
+      background-color: $greyKrocim;
+      opacity: 0.9;
+      display: flex;
+      height: 60px;
+      width: 100%;
+      a {
+        width: 33.33%;
+        display: block;
+        text-decoration: none;
+        font-family: $fontKrocim, sans-serif;
+        i {
+          font-size: 2em;
+          line-height: 40px;
+        }
+        span {
+          margin:auto;
+          z-index: 3;
+        }
+        &:hover {
+          background-color: black;
+        }
+      }
+      .sep {
+        border-right: 2px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+}
