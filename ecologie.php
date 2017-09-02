@@ -26,7 +26,15 @@ include('structure/test_arbo.php');
 
     <div class="justify">
       <p>
-        Chez K-roCIM sàrl, nous avons la conviction qu'une attitude écologiquement et socialement responsable est compatible avec la croissance saine d'une entreprise. Pour cette raison :
+          Chez K-roCIM sàrl, nous avons la conviction qu'une attitude écologiquement et socialement responsable est compatible avec la croissance saine d'une entreprise.
+      </p>
+    </div>
+
+    <img id="img_ecologie" alt="Image de la nature sur Genève" title="Soyons écologiques pour préserver nos beaux paysages" src="img/ecologie.jpg">
+
+    <div class="justify">
+      <p>
+          Pour cette raison :
       </p>
 
       <ul>
@@ -54,7 +62,7 @@ include('structure/test_arbo.php');
       </ul>
     </div>
 
-    <img id="img_ecologie" alt="Image de la nature sur Genève" title="Soyons écologiques pour préserver nos beaux paysages" src="img/ecologie.jpg">
+
 
     <p id="demande_devis">
       Demandez votre devis gratuit sous 48h

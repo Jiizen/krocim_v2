@@ -58,39 +58,39 @@ include('structure/test_arbo.php');
         </p>
         </div>
 
-        <h2>
-            Nos compétences
-        </h2>
-
-        <div id="competences">
-            <div>
-                <i class="material-icons">home</i>
-                <p>Compétence 1</p>
-            </div>
-            <div>
-                <i class="material-icons">home</i>
-                <p>Compétence 2</p>
-            </div>
-            <div>
-                <i class="material-icons">home</i>
-                <p>Compétence 3</p>
-            </div>
-        </div>
-
-        <div id="competences_mob">
-            <div>
-                <i class="material-icons">home</i>
-                <p>Compétence 1</p>
-            </div>
-            <div>
-                <i class="material-icons">home</i>
-                <p>Compétence 2</p>
-            </div>
-            <div>
-                <i class="material-icons">home</i>
-                <p>Compétence 3</p>
-            </div>
-        </div>
+<!--        <h2>-->
+<!--            Nos compétences-->
+<!--        </h2>-->
+<!---->
+<!--        <div id="competences">-->
+<!--            <div>-->
+<!--                <i class="material-icons">home</i>-->
+<!--                <p>Compétence 1</p>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <i class="material-icons">home</i>-->
+<!--                <p>Compétence 2</p>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <i class="material-icons">home</i>-->
+<!--                <p>Compétence 3</p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div id="competences_mob">-->
+<!--            <div>-->
+<!--                <i class="material-icons">home</i>-->
+<!--                <p>Compétence 1</p>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <i class="material-icons">home</i>-->
+<!--                <p>Compétence 2</p>-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                <i class="material-icons">home</i>-->
+<!--                <p>Compétence 3</p>-->
+<!--            </div>-->
+<!--        </div>-->
 
         <p id="demande_devis">
             Demandez votre devis gratuit sous 48h

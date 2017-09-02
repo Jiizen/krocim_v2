@@ -8,4 +8,5 @@ $files_slider_realisation_mobile = glob($level . 'img/realisation/'.$repertoire.
         <div><img src="<?php echo $img; ?>"></div>
     <?php } ?>
 </div>
-<p>Glissez votre doigt pour faire défiler les photos</p>
+
+<p class="message_slide">Glissez votre doigt pour faire défiler les photos</p>

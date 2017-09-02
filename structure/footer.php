@@ -21,9 +21,9 @@
         <div id="horaire_footer">
             <h2>Horaires d'appel</h2>
             Du lundi au vendredi <br>
-            de 8h00 à 12h00 <br>
-            & <br>
-            de 13h30 à 18h00 <br>
+            de 7h00 à 19h30 <br>
+            & samedi<br>
+            de 08h00 à 18h00 <br>
         </div>
     </div>
     <div id="copyright">

@@ -8,7 +8,8 @@
             autoplay: true,
             autoplaySpeed: 3000,
             arrows: false,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            swipe: false
         });
 
         $('.material-icons').css("font-size");

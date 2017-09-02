@@ -49,18 +49,34 @@ include('structure/test_arbo.php');
                         <a href="tel:+41765293635" title="N° de téléphone de K-roCIM">076.529.36.35</a> <br>
                         <a href="mailto:k.rocim.sarl@gmail.com"
                            title="Adresse mail de K-roCIM">k.rocim.sarl@gmail.com</a>
-                        <br> <br> <br>
-                        Horaires d'appel du Lundi au Vendredi : <br>
-                        de 08h00 à 12h00 <br>
-                        & <br>
-                        de 13h30 à 18h00
                     </address>
+                        <br>
+                    <strong>Horaires d'appel</strong> <br>
+                        <table align="center" id="tableau_horaire">
+                            <tr>
+                            <td>Lundi</td>
+                            <td rowspan="5">07:00 à 19:30</td>
+                            </tr>
+                            <tr><td>Mardi</td></tr>
+                            <tr><td>Mercredi</td></tr>
+                            <tr><td>Jeudi</td></tr>
+                            <tr><td>Vendredi</td></tr>
+                            <tr>
+                                <td>Samedi</td>
+                                <td>08:00 à 18:00</td>
+                            </tr>
+                            <tr>
+                                <td>Dimanche</td>
+                                <td style="color:red">Fermé</td>
+                            </tr>
+                        </table>
+
                     <br>
                 </div>
 
                 <!-- Google maps -->
                 <div id="google_maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.717857997457!2d6.11500661576849!3d46.21606739097927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64be5e423585%3A0xc45b5e0c195013cc!2sChemin+du+Coin-de-Terre+3%2C+1219+Vernier!5e0!3m2!1sfr!2sch!4v1444765609647"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.7165715887636!2d6.114933315582808!3d46.216092979117036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64be5e423585%3A0x5baaeba19be38011!2sCarreleur+K-roCIM+S%C3%A0rl!5e0!3m2!1sfr!2sch!4v1504368632278"
                             frameborder="0" style="border:0" allowfullscreen>
                     </iframe>
                 </div>
